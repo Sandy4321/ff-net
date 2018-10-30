@@ -5,7 +5,7 @@ var DataPoint = function(canvas, x, y, label) {
 	this.x = x;
 	this.y = y;
 	this.label = label;
-	this.radius = 5;
+	this.radius = 6;
 }
 
 var p = DataPoint.prototype;
@@ -14,12 +14,12 @@ p.redraw = function() {
 	var ctx = this.canvas.ctx;
 	var width = this.canvas.domElement.width;
 	var height = this.canvas.domElement.height;
-	
+
 	var fillColor;
 	if (this.label == 0) fillColor = Color.RED;
 	else fillColor = Color.BLUE;
 	var strokeColor = fillColor.blend(Color.BLACK, 0.6);
-	
+
 	ctx.beginPath();
 	ctx.fillStyle = fillColor.toString();
 	ctx.strokeStyle = strokeColor.toString();

@@ -113,8 +113,9 @@ p.handleDragBegin = function(event) {
 		var dy = event.cursor.y - dataPoint.y * this.domElement.height;
 
 		var r = dataPoint.radius;
+		var rTolerance = r;
 
-		if (dx * dx + dy * dy <= r * r) {
+		if (dx * dx + dy * dy <= (r + rTolerance) * (r + rTolerance)) {
 			this.dragState = {
 				dataPoint: dataPoint,
 				offset: {x: dx, y: dy}
