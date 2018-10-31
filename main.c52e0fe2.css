@@ -25,7 +25,10 @@ h2 {
 
 svg {
 	cursor: default;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 canvas {
