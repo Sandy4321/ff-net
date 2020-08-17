@@ -8,8 +8,7 @@ class Color {
     this.b = b;
     this.a = a;
   }
-
-  // t = 1 means replace this with color c
+  
   blend(c, t) {
     if (Math.abs(t) > 1) throw new Error("t must be a number between -1 and 1");
     
@@ -38,125 +37,126 @@ class Color {
   }
 }
 
-Color.WHITE = new Color(1, 1, 1);
-Color.BLACK = new Color(0, 0, 0);
+Color.white = new Color(1, 1, 1);
+Color.black = new Color(0, 0, 0);
 
-Color.RED = new Color(226 / 255, 86 / 255, 86 / 255);
-Color.BLUE = new Color(135 / 255, 173 / 255, 236 / 255);
+Color.red = new Color(226 / 255, 86 / 255, 86 / 255);
+Color.blue = new Color(135 / 255, 173 / 255, 236 / 255);
 
-Color.LIGHT_BLUE = new Color(186 / 255, 224 / 255, 251 / 255);
-Color.LIGHT_RED = new Color(252 / 255, 163 / 255, 163 / 255);
+Color.lightBlue = new Color(186 / 255, 224 / 255, 251 / 255);
+Color.lightRed = new Color(252 / 255, 163 / 255, 163 / 255);
 
 module.exports = Color;
 },{}],2:[function(require,module,exports){
 const svg = {};
 
 svg.createElement = function(element) {
-	return document.createElementNS("http://www.w3.org/2000/svg", element);
+  return document.createElementNS("http://www.w3.org/2000/svg", element);
 }
 
 module.exports = svg;
 
 },{}],3:[function(require,module,exports){
-module.exports={"dataPoints":[{"x":0.08,"y":0.24,"label":1},{"x":0.2,"y":0.27,"label":1},{"x":0.05,"y":0.3,"label":1},{"x":0.1,"y":0.1,"label":1},{"x":0.4,"y":0.4,"label":0},{"x":0.6,"y":0.4,"label":0},{"x":0.65,"y":0.7,"label":0},{"x":0.7,"y":0.3,"label":0},{"x":0.35,"y":0.65,"label":0},{"x":0.3,"y":0.5,"label":0},{"x":0.7,"y":0.5,"label":0},{"x":0.75,"y":0.55,"label":0},{"x":0.7,"y":0.6,"label":0},{"x":0.65,"y":0.34,"label":0},{"x":0.8,"y":0.65,"label":0},{"x":0.5,"y":0.7,"label":0},{"x":0.5,"y":0.66,"label":0},{"x":0.56,"y":0.66,"label":0},{"x":0.46,"y":0.36,"label":0},{"x":0.46,"y":0.26,"label":0},{"x":0.36,"y":0.26,"label":0},{"x":0.26,"y":0.36,"label":0},{"x":0.56,"y":0.28,"label":0},{"x":0.33,"y":0.54,"label":0},{"x":0.23,"y":0.52,"label":0},{"x":0.26,"y":0.16,"label":1},{"x":0.06,"y":0.46,"label":1},{"x":0.13,"y":0.66,"label":1},{"x":0.2,"y":0.8,"label":1},{"x":0.5,"y":0.5,"label":1},{"x":0.45,"y":0.5,"label":1},{"x":0.5,"y":0.45,"label":1},{"x":0.45,"y":0.45,"label":1},{"x":0.55,"y":0.55,"label":1},{"x":0.5,"y":0.55,"label":1},{"x":0.5,"y":0.2,"label":1},{"x":0.4,"y":0.1,"label":1},{"x":0.6,"y":0.1,"label":1},{"x":0.75,"y":0.15,"label":1},{"x":0.88,"y":0.22,"label":1},{"x":0.9,"y":0.35,"label":1},{"x":0.9,"y":0.49,"label":1},{"x":0.88,"y":0.62,"label":1},{"x":0.9,"y":0.9,"label":1},{"x":0.9,"y":0.8,"label":1},{"x":0.75,"y":0.85,"label":1},{"x":0.55,"y":0.92,"label":1},{"x":0.6,"y":0.95,"label":1},{"x":0.06,"y":0.57,"label":1},{"x":0.09,"y":0.8,"label":1},{"x":0.4,"y":0.9,"label":1}],"neuralNet":{"layers":[{"neurons":[{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5}]}],"links":[{"n0":[0,0],"nf":[1,0],"weight":2.2559318523672673},{"n0":[0,0],"nf":[1,1],"weight":3.7705902078344162},{"n0":[0,0],"nf":[1,2],"weight":-5.673868837964195},{"n0":[0,0],"nf":[1,3],"weight":-2.552116396138559},{"n0":[0,0],"nf":[1,4],"weight":-4.765897189158554},{"n0":[0,1],"nf":[1,0],"weight":2.522847383501193},{"n0":[0,1],"nf":[1,1],"weight":-2.9902303588384505},{"n0":[0,1],"nf":[1,2],"weight":2.749623598598969},{"n0":[0,1],"nf":[1,3],"weight":-2.0657459601688077},{"n0":[0,1],"nf":[1,4],"weight":2.311040191441733},{"n0":[1,0],"nf":[2,0],"weight":-2.8083933750840506},{"n0":[1,0],"nf":[2,1],"weight":2.368208438212055},{"n0":[1,0],"nf":[2,2],"weight":2.792010178964303},{"n0":[1,0],"nf":[2,3],"weight":2.1204797088106764},{"n0":[1,0],"nf":[2,4],"weight":3.0855603411983634},{"n0":[1,1],"nf":[2,0],"weight":-2.1619760012233913},{"n0":[1,1],"nf":[2,1],"weight":2.7735676578848043},{"n0":[1,1],"nf":[2,2],"weight":-4.795321974592097},{"n0":[1,1],"nf":[2,3],"weight":-3.1618858651724424},{"n0":[1,1],"nf":[2,4],"weight":2.642537468325151},{"n0":[1,2],"nf":[2,0],"weight":5.111269168104936},{"n0":[1,2],"nf":[2,1],"weight":1.8060793114773712},{"n0":[1,2],"nf":[2,2],"weight":1.2874475479043777},{"n0":[1,2],"nf":[2,3],"weight":3.715659708889894},{"n0":[1,2],"nf":[2,4],"weight":-5.479057778095251},{"n0":[1,3],"nf":[2,0],"weight":4.279970838297447},{"n0":[1,3],"nf":[2,1],"weight":-3.8573191202934085},{"n0":[1,3],"nf":[2,2],"weight":-4.346636276004062},{"n0":[1,3],"nf":[2,3],"weight":1.8026421918582567},{"n0":[1,3],"nf":[2,4],"weight":3.9687935202147346},{"n0":[1,4],"nf":[2,0],"weight":-3.5216391228147197},{"n0":[1,4],"nf":[2,1],"weight":4.599458665307638},{"n0":[1,4],"nf":[2,2],"weight":-4.752572287153145},{"n0":[1,4],"nf":[2,3],"weight":-3.810827524569661},{"n0":[1,4],"nf":[2,4],"weight":3.0650028924296953},{"n0":[2,0],"nf":[3,0],"weight":-4.300364295192499},{"n0":[2,0],"nf":[3,1],"weight":-2.9036061692080217},{"n0":[2,1],"nf":[3,0],"weight":4.132576329093505},{"n0":[2,1],"nf":[3,1],"weight":-3.817976850598705},{"n0":[2,2],"nf":[3,0],"weight":4.606542085589321},{"n0":[2,2],"nf":[3,1],"weight":2.8220313920923323},{"n0":[2,3],"nf":[3,0],"weight":2.3423002019828885},{"n0":[2,3],"nf":[3,1],"weight":2.098573708791525},{"n0":[2,4],"nf":[3,0],"weight":4.4760505444141625},{"n0":[2,4],"nf":[3,1],"weight":3.95752484391276},{"n0":[3,0],"nf":[4,0],"weight":-0.7265226578414495},{"n0":[3,1],"nf":[4,0],"weight":-4.316679309853457}]}}
+module.exports={"dataPoints":[{"x":0.08,"y":0.24,"label":1},{"x":0.2,"y":0.27,"label":1},{"x":0.05,"y":0.3,"label":1},{"x":0.1,"y":0.1,"label":1},{"x":0.4,"y":0.4,"label":0},{"x":0.6,"y":0.4,"label":0},{"x":0.65,"y":0.7,"label":0},{"x":0.7,"y":0.3,"label":0},{"x":0.35,"y":0.65,"label":0},{"x":0.3,"y":0.5,"label":0},{"x":0.7,"y":0.5,"label":0},{"x":0.75,"y":0.55,"label":0},{"x":0.7,"y":0.6,"label":0},{"x":0.65,"y":0.34,"label":0},{"x":0.8,"y":0.65,"label":0},{"x":0.5,"y":0.7,"label":0},{"x":0.5,"y":0.66,"label":0},{"x":0.56,"y":0.66,"label":0},{"x":0.46,"y":0.36,"label":0},{"x":0.46,"y":0.26,"label":0},{"x":0.36,"y":0.26,"label":0},{"x":0.26,"y":0.36,"label":0},{"x":0.56,"y":0.28,"label":0},{"x":0.33,"y":0.54,"label":0},{"x":0.23,"y":0.52,"label":0},{"x":0.26,"y":0.16,"label":1},{"x":0.06,"y":0.46,"label":1},{"x":0.13,"y":0.66,"label":1},{"x":0.2,"y":0.8,"label":1},{"x":0.5,"y":0.5,"label":1},{"x":0.45,"y":0.5,"label":1},{"x":0.5,"y":0.45,"label":1},{"x":0.45,"y":0.45,"label":1},{"x":0.55,"y":0.55,"label":1},{"x":0.5,"y":0.55,"label":1},{"x":0.5,"y":0.2,"label":1},{"x":0.4,"y":0.1,"label":1},{"x":0.6,"y":0.1,"label":1},{"x":0.75,"y":0.15,"label":1},{"x":0.88,"y":0.22,"label":1},{"x":0.9,"y":0.35,"label":1},{"x":0.9,"y":0.49,"label":1},{"x":0.88,"y":0.62,"label":1},{"x":0.9,"y":0.9,"label":1},{"x":0.9,"y":0.8,"label":1},{"x":0.75,"y":0.85,"label":1},{"x":0.55,"y":0.92,"label":1},{"x":0.6,"y":0.95,"label":1},{"x":0.06,"y":0.57,"label":1},{"x":0.09,"y":0.8,"label":1},{"x":0.4,"y":0.9,"label":1}],"model":{"layers":[{"neurons":[{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5},{"bias":0.5}]},{"neurons":[{"bias":0.5}]}],"links":[{"n0":[0,0],"nf":[1,0],"weight":2.2559318523672673},{"n0":[0,0],"nf":[1,1],"weight":3.7705902078344162},{"n0":[0,0],"nf":[1,2],"weight":-5.673868837964195},{"n0":[0,0],"nf":[1,3],"weight":-2.552116396138559},{"n0":[0,0],"nf":[1,4],"weight":-4.765897189158554},{"n0":[0,1],"nf":[1,0],"weight":2.522847383501193},{"n0":[0,1],"nf":[1,1],"weight":-2.9902303588384505},{"n0":[0,1],"nf":[1,2],"weight":2.749623598598969},{"n0":[0,1],"nf":[1,3],"weight":-2.0657459601688077},{"n0":[0,1],"nf":[1,4],"weight":2.311040191441733},{"n0":[1,0],"nf":[2,0],"weight":-2.8083933750840506},{"n0":[1,0],"nf":[2,1],"weight":2.368208438212055},{"n0":[1,0],"nf":[2,2],"weight":2.792010178964303},{"n0":[1,0],"nf":[2,3],"weight":2.1204797088106764},{"n0":[1,0],"nf":[2,4],"weight":3.0855603411983634},{"n0":[1,1],"nf":[2,0],"weight":-2.1619760012233913},{"n0":[1,1],"nf":[2,1],"weight":2.7735676578848043},{"n0":[1,1],"nf":[2,2],"weight":-4.795321974592097},{"n0":[1,1],"nf":[2,3],"weight":-3.1618858651724424},{"n0":[1,1],"nf":[2,4],"weight":2.642537468325151},{"n0":[1,2],"nf":[2,0],"weight":5.111269168104936},{"n0":[1,2],"nf":[2,1],"weight":1.8060793114773712},{"n0":[1,2],"nf":[2,2],"weight":1.2874475479043777},{"n0":[1,2],"nf":[2,3],"weight":3.715659708889894},{"n0":[1,2],"nf":[2,4],"weight":-5.479057778095251},{"n0":[1,3],"nf":[2,0],"weight":4.279970838297447},{"n0":[1,3],"nf":[2,1],"weight":-3.8573191202934085},{"n0":[1,3],"nf":[2,2],"weight":-4.346636276004062},{"n0":[1,3],"nf":[2,3],"weight":1.8026421918582567},{"n0":[1,3],"nf":[2,4],"weight":3.9687935202147346},{"n0":[1,4],"nf":[2,0],"weight":-3.5216391228147197},{"n0":[1,4],"nf":[2,1],"weight":4.599458665307638},{"n0":[1,4],"nf":[2,2],"weight":-4.752572287153145},{"n0":[1,4],"nf":[2,3],"weight":-3.810827524569661},{"n0":[1,4],"nf":[2,4],"weight":3.0650028924296953},{"n0":[2,0],"nf":[3,0],"weight":-4.300364295192499},{"n0":[2,0],"nf":[3,1],"weight":-2.9036061692080217},{"n0":[2,1],"nf":[3,0],"weight":4.132576329093505},{"n0":[2,1],"nf":[3,1],"weight":-3.817976850598705},{"n0":[2,2],"nf":[3,0],"weight":4.606542085589321},{"n0":[2,2],"nf":[3,1],"weight":2.8220313920923323},{"n0":[2,3],"nf":[3,0],"weight":2.3423002019828885},{"n0":[2,3],"nf":[3,1],"weight":2.098573708791525},{"n0":[2,4],"nf":[3,0],"weight":4.4760505444141625},{"n0":[2,4],"nf":[3,1],"weight":3.95752484391276},{"n0":[3,0],"nf":[4,0],"weight":-0.7265226578414495},{"n0":[3,1],"nf":[4,0],"weight":-4.316679309853457}]}}
 },{}],4:[function(require,module,exports){
 const nn = require("./nn");
 const ui = require("./ui");
 const svg = require("./common/svg");
 
-function init() {
-  const data = require("./data");
-  
-  window.controllableParameters = {
-    learningRate: 0.2,
-    regularization: 0.000009
-  };
-  
-  const container = document.createElement("div");
-  container.className = "content-container";
-  document.body.appendChild(container);
-  
-  let row;
-  
-  row = document.createElement("div");
-  container.appendChild(row);
-  row.className = "content-container-row";
-  
-  const svgNeuralNet = svg.createElement("svg");
-  svgNeuralNet.className = "content-container-cell";
-  svgNeuralNet.id = "neural-net";
-  row.appendChild(svgNeuralNet);
-  
-  window.neuralNet = nn.Sequential.fromData(data.neuralNet);
-  svgNeuralNet.appendChild(neuralNet.svgElement);
-  
-  window.dataCanvas = ui.DataCanvas.fromData(data.dataPoints);
-  dataCanvas.domElement.className += " content-container-cell";
-  dataCanvas.domElement.id = "data-canvas";
-  row.appendChild(dataCanvas.domElement);
-  
-  row = document.createElement("div");
-  container.appendChild(row);
-  row.className = "content-container-row";
-  
-  window.controlPanel = new ui.ControlPanel(neuralNet, controllableParameters);
-  controlPanel.domElement.className += " content-container-cell";
-  row.appendChild(controlPanel.domElement);
-  
-  update();
-}
+class App {
+  constructor(data) {
+    this.learningRate = 0.2;
+    this.regularization = 0.000009;
+    
+    const container = document.createElement("div");
+    container.className = "content-container";
+    document.body.appendChild(container);
+    
+    let row;
+    
+    row = document.createElement("div");
+    container.appendChild(row);
+    row.className = "content-container-row";
+    
+    let svgModel = svg.createElement("svg");
+    svgModel.class = "content-container-cell";
+    svgModel.id = "neural-net";
+    row.appendChild(svgModel);
+    
+    const model = this.model = nn.Sequential.fromData(data.model);
+    svgModel.appendChild(model.svgElement);
+    
+    const dataCanvas = this.dataCanvas = ui.DataCanvas.fromData(data.dataPoints);
+    dataCanvas.domElement.className += " content-container-cell";
+    dataCanvas.domElement.id = "data-canvas";
+    row.appendChild(dataCanvas.domElement);
+    
+    row = document.createElement("div");
+    container.appendChild(row);
+    row.className = "content-container-row";
+    
+    const controlPanel = this.controlPanel = new ui.ControlPanel(this);
+    controlPanel.domElement.className += " content-container-cell";
+    row.appendChild(controlPanel.domElement);
+    
+    this.update();
+  }
 
-function update() {
-  const iters = 10;
-  let dataError, regularizationError;
+  update() {
+    const iters = 10;
+    let dataLoss, regularizationLoss;
 
-  for (let i = 0; i < iters; i++) {
-    dataError = 0;
-    dataCanvas.dataPoints.forEach((dataPoint) => {
-      neuralNet.reset();
-      neuralNet.layers[0].neurons[0].activation = dataPoint.x;
-      neuralNet.layers[0].neurons[1].activation = dataPoint.y;
-      neuralNet.forward();
-      
-      const neuron = neuralNet.layers[neuralNet.layers.length - 1].neurons[0];
-      const output = neuron.activation;
-      const d = dataPoint.label - output;
-      dataError += 0.5 * d * d;
-      neuron.dActivation = -d;
-      
-      regularizationError = neuralNet.backward(
-        controllableParameters.learningRate,
-        controllableParameters.regularization
-      );
+    const model = this.model;
+    const dataCanvas = this.dataCanvas;
+    for (let i = 0; i < iters; i++) {
+      dataLoss = 0;
+      dataCanvas.dataPoints.forEach((dataPoint) => {
+        model.reset();
+        model.layers[0].neurons[0].activation = dataPoint.x;
+        model.layers[0].neurons[1].activation = dataPoint.y;
+        model.forward();
+        
+        const neuron = model.layers[model.layers.length - 1].neurons[0];
+        const output = neuron.activation;
+        const d = dataPoint.label - output;
+        dataLoss += 0.5 * d * d;
+        neuron.dActivation = -d;
+        
+        regularizationLoss = model.backward(
+          this.learningRate,
+          this.regularization
+        );
+      });
+    }
+    
+    model.render();
+    dataCanvas.render((x, y) => {
+      model.layers[0].neurons[0].activation = x;
+      model.layers[0].neurons[1].activation = y;
+      model.forward();
+      return model.layers[model.layers.length - 1].neurons[0].activation;
+    });
+    this.controlPanel.update({
+      totalLoss: dataLoss + regularizationLoss,
+      dataLoss: dataLoss,
+      regularizationLoss: regularizationLoss
+    });
+
+    requestAnimationFrame(() => {
+      this.update();
     });
   }
-  
-  neuralNet.render();
-  dataCanvas.render(function(x, y) {
-    neuralNet.layers[0].neurons[0].activation = x;
-    neuralNet.layers[0].neurons[1].activation = y;
-    neuralNet.forward();
-    return neuralNet.layers[neuralNet.layers.length - 1].neurons[0].activation;
-  });
-  controlPanel.update({
-    totalError: dataError + regularizationError,
-    dataError: dataError,
-    regularizationError: regularizationError
-  });
 
-  requestAnimationFrame(update);
-}
-
-function getData() {
-  return {
-    dataPoints: dataCanvas.toData(),
-    neuralNet: neuralNet.toData()
+  toData() {
+    return {
+      dataPoints: this.dataCanvas.toData(),
+      model: this.model.toData()
+    }
   }
 }
-window.getData = getData;
 
-init();
-
+const data = require("./data");
+window.app = new App(data);
 },{"./common/svg":2,"./data":3,"./nn":9,"./ui":14}],5:[function(require,module,exports){
 const Neuron = require("./Neuron");
 
@@ -206,15 +206,13 @@ class Layer {
     };
     return data;
   }
-}
 
-Layer.fromData = function(neuralNet, data) {
-	const layer = neuralNet.addLayer();
-	for (let i = 0; i < data.neurons.length; i++) {
-		const neuronData = data.neurons[i];
-		Neuron.fromData(layer, neuronData);
-	}
-	return layer;
+  static fromData(neuralNet, data) {
+    const layer = neuralNet.addLayer();
+    data.neurons.forEach((neuronData) => {
+      Neuron.fromData(layer, neuronData);
+    });
+  }
 }
 
 module.exports = Layer;
@@ -238,10 +236,10 @@ class Link {
     this.dWeight = 0;
 
     this.svgElement = svg.createElement("path");
-    this.redraw();
+    this.render();
   }
 
-  redraw() {
+  render() {
     const path = this.svgElement;
     const p0 = this.n0.getPosition();
     const pf = this.nf.getPosition();
@@ -254,8 +252,8 @@ class Link {
     const width = 9 * Math.min(1, Math.abs(this.weight) / maxVisibleWeight);
     path.setAttribute("stroke-width", width);
     let color;
-    if (this.weight < 0) color = Color.RED;
-    else color = Color.BLUE;
+    if (this.weight < 0) color = Color.red;
+    else color = Color.blue;
     path.setAttribute("stroke-opacity", 0.4);
     path.setAttribute("stroke", color);
   }
@@ -286,14 +284,16 @@ class Link {
     data.weight = this.weight;
     return data;
   }
-}
 
-Link.fromData = function(neuralNet, data) {
-  const weight = data.weight;
-  const n0 = neuralNet.layers[data.n0[0]].neurons[data.n0[1]];
-  const nf = neuralNet.layers[data.nf[0]].neurons[data.nf[1]];
-  const link = neuralNet.addLink(n0, nf, weight);
-  return link;
+  static fromData(neuralNet, data) {
+    const weight = data.weight;
+    const a = data.n0;
+    const b = data.nf;
+    const n0 = neuralNet.layers[a[0]].neurons[a[1]];
+    const nf = neuralNet.layers[b[0]].neurons[b[1]];
+    const link = neuralNet.addLink(n0, nf, weight);
+    return link;
+  }
 }
 
 module.exports = Link;
@@ -306,11 +306,11 @@ const radius = 12;
 const strokeWidth = 2;
 
 function sigmoid(n) {
-	return 1 / (1 + Math.exp(-n));
+  return 1 / (1 + Math.exp(-n));
 }
 
 function dSigmoid(n) {
-	return sigmoid(n) * (1 - sigmoid(n));
+  return sigmoid(n) * (1 - sigmoid(n));
 }
 
 class Neuron {
@@ -318,15 +318,14 @@ class Neuron {
     this.layer = layer;
     this.links = [];
     this.backLinks = [];
+
     this.bias = bias;
     this.preActivation = 0;
     this.activation = sigmoid(this.bias);
+
     this.dActivation = 0;
     this.dPreActivation = 0;
     this.dBias = 0;
-
-    this.isInput = false; // TODO determine based on links
-    this.isOutput = false; // TODO determine based on links
 
     const svgElement = this.svgElement = svg.createElement("circle");
     svgElement.setAttribute("r", radius);
@@ -367,14 +366,19 @@ class Neuron {
     const position = this.getPosition();
     circle.setAttribute("cx", position.x);
     circle.setAttribute("cy", position.y);
-    
-    const maxVisibleBias = 3;
-    let bias = this.bias;
-    if (bias < -maxVisibleBias) bias = -maxVisibleBias;
-    else if (bias > maxVisibleBias) bias = maxVisibleBias;
-    const tFillColor = (bias / maxVisibleBias + 1) * 0.5;
-    const fillColor = Color.RED.blend(Color.BLUE, tFillColor);
-    const strokeColor = fillColor.blend(Color.BLACK, 0.3);
+
+    const isInput = this.backLinks.length == 0;
+    let fillColor;
+    if (isInput) {
+      fillColor = Color.blue.blend(Color.red, 0.6);
+    } else {
+      const maxVisibleAbsBias = 3;
+      let visibleBias = Math.max(Math.min(this.bias, maxVisibleAbsBias), -maxVisibleAbsBias);
+      const t = 0.5  + visibleBias / maxVisibleAbsBias * 0.5;
+      fillColor = Color.red.blend(Color.blue, t);
+    }
+
+    const strokeColor = fillColor.blend(Color.black, 0.3);
     
     circle.setAttribute("fill", fillColor.toString());
     circle.setAttribute("stroke", strokeColor.toString());
@@ -431,10 +435,10 @@ class Neuron {
       bias: this.bias
     };
   }
-}
 
-Neuron.fromData = function(layer, data) {
-  layer.addNeuron(data.bias);
+  static fromData(layer, data) {
+    layer.addNeuron(data.bias);
+  }
 }
 
 module.exports = Neuron;
@@ -459,34 +463,34 @@ class Sequential {
     this.svgElement.appendChild(this.svgNeurons);
   }
 
-  addLayer(neuronCount) {
-    if (neuronCount == null) neuronCount = 0;	
+  addLayer(neurons) {
+    if (neurons == null) neurons = 0;	
     
-    var layer = new Layer(this);
+    const layer = new Layer(this);
     this.layers.push(layer);
     
-    for (var i = 0; i < neuronCount; i++) {
-      var neuron = layer.addNeuron();
+    for (let i = 0; i < neurons; i++) {
+      layer.addNeuron();
     }
     
     return layer;
   }
 
-  addFullyConnectedLayer(neuronCount) {
-    var l0 = this.layers[this.layers.length - 1];
-    this.addLayer(neuronCount);
-    var lf = this.layers[this.layers.length - 1];
-    for (var i = 0; i < l0.neurons.length; i++) {
-      var n0 = l0.neurons[i];
-      for (var j = 0; j < lf.neurons.length; j++) {
-        var nf = lf.neurons[j];
+  addFullyConnectedLayer(neurons) {
+    const l0 = this.layers[this.layers.length - 1];
+    this.addLayer(neurons);
+    const lf = this.layers[this.layers.length - 1];
+    for (let i = 0; i < l0.neurons.length; i++) {
+      const n0 = l0.neurons[i];
+      for (let j = 0; j < lf.neurons.length; j++) {
+        const nf = lf.neurons[j];
         this.addLink(n0, nf);
       }
     }
   }
 
   addLink(n0, nf, weight) {
-    var link = new Link(this, n0, nf, weight);
+    const link = new Link(this, n0, nf, weight);
     n0.links.push(link);
     nf.backLinks.push(link);
     this.links.push(link);
@@ -495,111 +499,84 @@ class Sequential {
   }
 
   render() {
-    for (var i = 0; i < this.layers.length; i++) {
-      var layer = this.layers[i];
-      layer.render();
-    }
-    for (var i = 0; i < this.links.length; i++) {
-      var link = this.links[i];
-      link.redraw();
-    }
+    this.layers.forEach((layer) => layer.render());
+    this.links.forEach((link) => link.render());
   }
 
-  reset(input) {
-    for (var i = 0; i < this.layers.length; i++) {
-      var layer = this.layers[i];
-      layer.reset();
-    }
+  reset() {
+    this.layers.forEach((layer) => layer.reset());
   }
 
   randomizeParameters() {
-    for (var i = 0; i < this.links.length; i++) {
-      var link = this.links[i];
-      var weight = 2 + Math.random() * 4;
+    this.links.forEach((link) => {
+      let weight = 2 + Math.random() * 4;
       if (Math.random() <= 0.5) weight *= -1;
       link.weight = weight;
-    }
+    });
     
-    for (var i = 0; i < this.neurons.length; i++) {
-      var neuron = this.neurons[i];
-      var bias = 1 + Math.random() * 2;
+    this.neurons.forEach((neuron) => {
+      let bias = 1 + Math.random() * 2;
       if (Math.random() <= 0.5) bias *= -1;
       neuron.bias = bias;
-    }
+    });
   }
 
-  forward(input) {
-    for (var i = 1; i < this.layers.length; i++) {
-      var layer = this.layers[i];
-      for (var j = 0; j < layer.neurons.length; j++) {
-        var neuron = layer.neurons[j];
+  forward() {
+    for (let i = 1; i < this.layers.length; i++) {
+      const layer = this.layers[i];
+      layer.neurons.forEach((neuron) => {
         neuron.forward();
-      }
+      });
     }
   }
 
   backward(learningRate, regularization) {
-    let regularizationError = 0;
+    let regularizationLoss = 0;
     
-    for (var i = this.layers.length - 1; i >= 0; i--) {
-      var layer = this.layers[i];
-      for (var j = 0; j < layer.neurons.length; j++) {
-        var neuron = layer.neurons[j];
-        regularizationError += neuron.backward(regularization);
-      }
+    for (let i = this.layers.length - 1; i >= 0; i--) {
+      const layer = this.layers[i];
+      layer.neurons.forEach((neuron) => {
+        regularizationLoss += neuron.backward(regularization);
+      });
     }
     
     this.applyGradient(learningRate);
-    
-    return regularizationError;
+    return regularizationLoss;
   }
 
   applyGradient(learningRate) {
-    for (var i = 0; i < this.links.length; i++) {
-      var link = this.links[i];
+    this.links.forEach((link) => {
       link.applyGradient(learningRate);
-    }
+    });
     
-    for (var i = 1; i < this.layers.length; i++) {
-      var layer = this.layers[i];
-      for (var j = 0; j < layer.neurons.length; j++) {
-        var neuron = layer.neurons[j];
+    for (let i = 1; i < this.layers.length; i++) {
+      const layer = this.layers[i];
+      layer.neurons.forEach((neuron) => {
         neuron.applyGradient(learningRate);
-      }
+      });
     }
   }
 
   toData() {
-    var data = {};
-    
-    data.layers = [];
-    for (var i = 0; i < this.layers.length; i++) {
-      var layer = this.layers[i];
-      data.layers.push(layer.toData());
+    return {
+      layers: this.layers.map((layer) => layer.toData()),
+      links: this.links.map((link) => link.toData)
     }
-    
-    data.links = [];
-    for (var i = 0; i < this.links.length; i++) {
-      var link = this.links[i];
-      data.links.push(link.toData());
-    }
-    
-    return data;
   }
-}
 
-Sequential.fromData = function(data) {
-	const sequential = new Sequential();
+  static fromData(data) {
+    const sequential = new Sequential();
+    
+    data.layers.forEach((layerData) => {
+      Layer.fromData(sequential, layerData);
+    });
   
-  data.layers.forEach((layerData) => {
-    Layer.fromData(sequential, layerData);
-  });
-
-  data.links.forEach((linkData) => {
-    Link.fromData(sequential, linkData);
-  });
-	
-	return sequential;
+    data.links.forEach((linkData) => {
+      Link.fromData(sequential, linkData);
+    });
+    
+    return sequential;
+  }
 }
 
 module.exports = Sequential;
@@ -609,10 +586,12 @@ module.exports = {
   Sequential: require("./Sequential")
 };
 },{"./Sequential":8}],10:[function(require,module,exports){
-const ErrorPlot = require("./ErrorPlot");
+const LossPlot = require("./LossPlot");
 
 class ControlPanel {
-  constructor(neuralNet, controllableParameters) {
+  constructor(app) {
+    this.app = app;
+    
     const div = this.domElement = document.createElement("div");
     div.className = "control-panel";
     
@@ -622,36 +601,37 @@ class ControlPanel {
     let row;
 
     row = this.addRow("full");
-    var btnRandomize = document.createElement("div");
+    const btnRandomize = document.createElement("div");
     btnRandomize.innerHTML = "randomize network parameters";
     btnRandomize.className = "btn";
     row.cells[0].appendChild(btnRandomize);
+    const model = this.app.model;
     btnRandomize.addEventListener("click", () => {
-      neuralNet.randomizeParameters();
+      model.randomizeParameters();
     });
     
     row = this.addRow("slider", "learning rate");
     row.control.min = 1;
     row.control.max = 80;
-    row.control.value = Math.round(controllableParameters.learningRate * 100);
+    row.control.value = Math.round(this.app.learningRate * 100);
     row.control.addEventListener("change", function() {
-      controllableParameters.learningRate = this.value / 100;
+      this.app.learningRate = this.value / 100;
     }.bind(row.control));
     
     row = this.addRow("slider", "regularization");
     row.control.min = 0;
     row.control.max = 100;
-    row.control.value = Math.round(controllableParameters.regularization * 1000000);
+    row.control.value = Math.round(this.app.regularization * 1000000);
     row.control.addEventListener("change", function() {
-      controllableParameters.regularization = this.value / 1000000;
+      this.app.regularization = this.value / 1000000;
     }.bind(row.control));
     
     row = this.addRow("text", "loss");
     row.control.className = "formatted-number";
       
     row = this.addRow("full");
-    var errorPlot = this.errorPlot = new ErrorPlot();
-    row.cells[0].appendChild(errorPlot.domElement);
+    const lossPlot = this.lossPlot = new LossPlot();
+    row.cells[0].appendChild(lossPlot.domElement);
   }
 
   addCell(row) {
@@ -663,14 +643,14 @@ class ControlPanel {
   }
 
   addRow(type, label) {
-    var row = document.createElement("div");
+    const row = document.createElement("div");
     row.cells = [];
     row.className = "control-row";
     this.domElement.appendChild(row);
     this.rows.push(row);
     this.rowsByLabel[label] = row;
     
-    var cell;
+    let cell;
     
     if (type == "full") {
       cell = document.createElement("div");
@@ -682,7 +662,7 @@ class ControlPanel {
       cell.innerHTML = label;
       
       cell = this.addCell(row);
-      var control;
+      let control;
       switch (type) {
         case "slider":
           control = document.createElement("input");
@@ -700,15 +680,15 @@ class ControlPanel {
     return row;
   }
 
-  update(data) {
-    this.rowsByLabel["loss"].control.textContent = data.totalError.toFixed(10);
-    this.errorPlot.update(data.dataError, data.regularizationError);
+  update(args) {
+    this.rowsByLabel["loss"].control.textContent = args.totalLoss.toFixed(10);
+    this.lossPlot.update(args.dataLoss, args.regularizationLoss);
   }
 }
 
 module.exports = ControlPanel;
 
-},{"./ErrorPlot":13}],11:[function(require,module,exports){
+},{"./LossPlot":13}],11:[function(require,module,exports){
 const Color = require("../common/Color");
 const DataPoint = require("./DataPoint");
 
@@ -734,7 +714,9 @@ class DataCanvas {
   }
 
   addDataPoint(x, y, label) {
-    this.dataPoints.push(new DataPoint(this, x, y, label));
+    const dataPoint = new DataPoint(this, x, y, label);
+    this.dataPoints.push(dataPoint);
+    return dataPoint;
   }
 
   render(classify) {
@@ -748,22 +730,22 @@ class DataCanvas {
 
     for (let i = 0; i < width; i++) {
       for (let j = 0; j < height; j++) {
-        var label = classify(i / width, j / height);
-        var color = Color.LIGHT_RED.blend(Color.LIGHT_BLUE, label);
+        const label = classify(i / width, j / height);
+        const color = Color.lightRed.blend(Color.lightBlue, label);
         this.pixelColors[i][j] = color;
       }
     }
 
-    var fWidth = canvasWidth / width;
-    var fHeight = canvasHeight / height;
-    var canvasImageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+    const fWidth = canvasWidth / width;
+    const fHeight = canvasHeight / height;
+    const canvasImageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    for (var i = 0; i < canvasImageData.data.length / 4; i++) {
-      var y = Math.floor(i / canvasWidth);
-      var x = i % canvasWidth;
-      var ii = Math.floor(x / fWidth);
-      var jj = Math.floor(y / fHeight);
-      var color = this.pixelColors[ii][jj];
+    for (let i = 0; i < canvasImageData.data.length / 4; i++) {
+      const y = Math.floor(i / canvasWidth);
+      const x = i % canvasWidth;
+      const ii = Math.floor(x / fWidth);
+      const jj = Math.floor(y / fHeight);
+      const color = this.pixelColors[ii][jj];
       canvasImageData.data[4 * i] = Math.round(color.r * 255);
       canvasImageData.data[4 * i + 1] = Math.round(color.g * 255);
       canvasImageData.data[4 * i + 2] = Math.round(color.b * 255);
@@ -771,15 +753,12 @@ class DataCanvas {
     }
     ctx.putImageData(canvasImageData, 0, 0);
 
-    for (var i = 0; i < this.dataPoints.length; i++) {
-      var dataPoint = this.dataPoints[i];
-      dataPoint.render();
-    }
+    this.dataPoints.forEach((dataPoint) => dataPoint.render());
   }
 
   computeCursor(event) {
-    var rect = this.domElement.getBoundingClientRect();
-    var clientX, clientY;
+    const rect = this.domElement.getBoundingClientRect();
+    let clientX, clientY;
     if (event.touches == null) {
       clientX = event.clientX;
       clientY = event.clientY;
@@ -787,14 +766,14 @@ class DataCanvas {
       clientX = event.touches[0].clientX;
       clientY = event.touches[0].clientY;
     }
-    var left = clientX - rect.left;
-    var top = clientY - rect.top;
-    var cursor = {x: left, y: top};
+    const left = clientX - rect.left;
+    const top = clientY - rect.top;
+    const cursor = {x: left, y: top};
     event.cursor = cursor;
   }
 
   setUpDragBehavior() {
-    var canvas = this.domElement;
+    const canvas = this.domElement;
 
     this.dragState = null;
 
@@ -816,20 +795,22 @@ class DataCanvas {
     event.preventDefault();
     this.computeCursor(event);
 
-    for (var i = 0; i < this.dataPoints.length; i++) {
-      var dataPoint = this.dataPoints[i];
+    for (let i = 0; i < this.dataPoints.length; i++) {
+      const dataPoint = this.dataPoints[i];
 
-      var dx = event.cursor.x - dataPoint.x * this.domElement.width;
-      var dy = event.cursor.y - dataPoint.y * this.domElement.height;
+      const dx = event.cursor.x - dataPoint.x * this.domElement.width;
+      const dy = event.cursor.y - dataPoint.y * this.domElement.height;
 
-      var r = dataPoint.radius;
-
-      const selectionRadius = r * 3;
+      const radius = dataPoint.radius;
+      const selectionRadius = radius * 3;
 
       if (dx * dx + dy * dy <= selectionRadius * selectionRadius) {
         this.dragState = {
           dataPoint: dataPoint,
-          offset: {x: dx, y: dy}
+          offset: {
+            x: dx,
+            y: dy
+          }
         };
         break;
       }
@@ -841,8 +822,8 @@ class DataCanvas {
     this.computeCursor(event);
     event.preventDefault();
 
-    var dataPoint = this.dragState.dataPoint;
-    var offset = this.dragState.offset;
+    const dataPoint = this.dragState.dataPoint;
+    const offset = this.dragState.offset;
 
     dataPoint.x = (event.cursor.x - offset.x) / this.domElement.width;
     dataPoint.y = (event.cursor.y - offset.y) / this.domElement.height;
@@ -855,30 +836,22 @@ class DataCanvas {
 
   handleDragEnd(event) {
     if (this.dragState == null) return;
-    var dataPoint = this.dragState.dataPoint;
+    const dataPoint = this.dragState.dataPoint;
     this.dragState = null;
   }
 
   toData() {
-    const data = [];
-    for (var i = 0; i < this.dataPoints.length; i++) {
-      const dataPoint = this.dataPoints[i];
-      data.push({
-        x: dataPoint.x,
-        y: dataPoint.y,
-        label: dataPoint.label
-      });
-    }
+    const data = this.dataPoints.map((dataPoint) => dataPoint.toData());
     return data;
   }
-}
 
-DataCanvas.fromData = function(data) {
-  const dataCanvas = new DataCanvas();
-  data.forEach((item) => {
-    dataCanvas.addDataPoint(item.x, item.y, item.label);
-  });
-  return dataCanvas;
+  static fromData(data) {
+    const dataCanvas = new DataCanvas();
+    data.forEach((item) => {
+      dataCanvas.addDataPoint(item.x, item.y, item.label);
+    });
+    return dataCanvas;
+  }
 }
 
 module.exports = DataCanvas;
@@ -901,9 +874,9 @@ class DataPoint {
     const height = this.canvas.domElement.height;
     
     let fillColor;
-    if (this.label == 0) fillColor = Color.RED;
-    else fillColor = Color.BLUE;
-    const strokeColor = fillColor.blend(Color.BLACK, 0.6);
+    if (this.label == 0) fillColor = Color.red;
+    else fillColor = Color.blue;
+    const strokeColor = fillColor.blend(Color.black, 0.6);
     
     ctx.beginPath();
     ctx.fillStyle = fillColor.toString();
@@ -916,44 +889,45 @@ class DataPoint {
     ctx.fill();
     ctx.stroke();
   }
+
+  toData() {
+    return {
+      x: this.x,
+      y: this.y,
+      label: this.label
+    }
+  }
 }
 
 module.exports = DataPoint;
 },{"../common/Color":1}],13:[function(require,module,exports){
-const minTopError = 4;
+const minTopLoss = 4;
 
-class ErrorPlot {
+class LossPlot {
   constructor() {
     const canvas = this.domElement = document.createElement("canvas");
-    canvas.id = "error-canvas";
+    canvas.className = "loss-plot-canvas";
     this.ctx = canvas.getContext("2d");	
     this.maxDataLength = canvas.width;
     this.data = [];
-    this.topError = minTopError;
+    this.topLoss = minTopLoss;
   }
 
-  getMaxTotalError() {
-    let max = 0;
-    this.data.forEach((item) => {
-      const totalError = item.totalError;
-      if (totalError > max) max = totalError;
-    });
-    return max;
-  }
+  update(dataLoss, regularizationLoss) {
+    if (this.data.length == this.maxDataLength) this.data.shift();
 
-  update(dataError, regularizationError) {
-    if (this.data.length == this.maxDataLength) {
-      this.data.shift();
-    }
-    const totalError = dataError + regularizationError;
+    const totalLoss = dataLoss + regularizationLoss;
     this.data.push({
-      dataError: dataError,
-      regularizationError: regularizationError,
-      totalError: totalError
+      dataLoss: dataLoss,
+      regularizationLoss: regularizationLoss,
+      totalLoss: totalLoss
     });
-    const maxTotalError = this.getMaxTotalError();
-    if (maxTotalError > minTopError) this.topError = maxTotalError;
-    else this.topError = minTopError;
+
+    const totalLosses = this.data.map((item) => item.totalLoss)
+    const maxTotalLoss = Math.max.apply(null, totalLosses);
+    if (maxTotalLoss > minTopLoss) this.topLoss = maxTotalLoss;
+    else this.topLoss = minTopLoss;
+
     this.render();
   }
 
@@ -964,9 +938,9 @@ class ErrorPlot {
     ctx.clearRect(0, 0, width, height);
     
     this.data.forEach((item, i) => {
-      const totalError = item.totalError;
+      const totalLoss = item.totalLoss;
       const x = i / (this.maxDataLength - 1) * width;
-      const y = height * (1 - totalError / this.topError);
+      const y = height * (1 - totalLoss / this.topLoss);
       ctx.beginPath();
       ctx.strokeStyle = "rgb(255, 221, 78)";
       ctx.moveTo(x, height);
@@ -976,7 +950,7 @@ class ErrorPlot {
   }
 }
 
-module.exports = ErrorPlot;
+module.exports = LossPlot;
 },{}],14:[function(require,module,exports){
 module.exports = {
   ControlPanel: require("./ControlPanel"),
